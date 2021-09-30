@@ -1,1 +1,39 @@
-<p>home works!</p>
+<div class="container">
+  <button routerLink="/add" type="button" class="button1 btn btn-success"><i class="fas fa-plus"></i></button>
+  <table class="table table-muted">
+    <thead>
+      <tr class="data-label">
+        <th scope="col">ID</th>
+        <th scope="col">Titulo de pelicula</th>
+        <th scope="col">Año</th>
+        <th scope="col">Duración</th>
+        <th scope="col">Lenguaje</th>
+        <th scope="col">Fecha de lanzamiento</th>
+        <th scope="col">Pais</th>
+        <th scope="col">Editar</th>
+        <th scope="col">Eliminar </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="titles" *ngFor="let movie of ListarMovie">
+        <th>{{movie.mov_id}}</th>
+        <td>{{movie.mov_title}}</td>
+        <td>{{movie.mov_year}}</td>
+        <td>{{movie.mov_time}}</td>
+        <td>{{movie.mov_lang}}</td>
+        <td>{{fixDate(movie.mov_dt_rel)}}</td>
+        <td>{{movie.mov_rel_country}}</td>
+
+        <td>
+          
+          <button type="submit" (click)="modify(movie.mov_id)"  class="btn btn-info titles"><i class="fas fa-wrench"></i></button>
+        </td>
+        <td>
+       
+          <button type="submit" (click)="delet(movie.mov_id)"  class="btn btn-danger titles"><i class="far fa-trash-alt"></i></button>
+        </td>
+      </tr>
+      <tr>
+    </tbody>
+  </table>
+</div>

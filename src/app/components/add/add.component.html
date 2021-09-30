@@ -1,1 +1,27 @@
-<p>add works!</p>
+<div class="container">
+  <p>Agregar Movie</p>
+  <div class="row">
+    <div class="col-sm-6">
+      <form action="">
+
+      
+        <label for="">Nombre de la pelicula</label>
+        <input [(ngModel)]="movie.mov_title" type="text" class="form-control" name="Nombre" required>
+        <label for="">Año</label>
+        <input [(ngModel)]="movie.mov_year" type="number" maxlength="4" oninput="if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" class="form-control" name="Año" required>
+        <label for="">Duración de la pelicula</label>
+        <input [(ngModel)]="movie.mov_time" type="number" maxlength="3" oninput="if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" class="form-control" name="Duracion" required>
+        <label for="">Lenguaje</label>
+        <input [(ngModel)]="movie.mov_lang" type="text" maxlength="50" class="form-control" name="Pais" required>
+        <label for="">Fecha</label>
+        <input [(ngModel)]="movie.mov_dt_rel" type="date" class="form-control" name="Fecha" required>
+        <label for="">Pais</label>
+        <input [(ngModel)]="movie.mov_rel_country" type="text" maxlength="2" class="form-control" name="Pais" required>
+      
+            <button (click)="add()" type="submit" class="btn btn-success mt-3" >GUARDAR</button>
+    </form>
+    </div>
+   
+  </div>
+</div>
+ 
