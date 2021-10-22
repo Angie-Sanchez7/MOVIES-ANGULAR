@@ -1,6 +1,5 @@
 # MOVIES
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.5.
+MIRA EL DESPLIEGUE AQUI https://angular-crud-movies.herokuapp.com/home
 
 ## Development server
 
